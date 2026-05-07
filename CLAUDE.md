@@ -1,172 +1,172 @@
-# Claude Code Repository Guide
+# Claude Code 儲存庫指南
 
-## Repository Overview
+## 儲存庫概述
 
-**Repository**: `daierlu6-sys/Claude-`  
-**Purpose**: A comprehensive resource for Claude Code documentation, examples, and development workflows  
-**Type**: Documentation and guidance repository  
-**Hosted**: GitHub (with local proxy access)
+**儲存庫**: `daierlu6-sys/Claude-`  
+**目的**: Claude Code 文檔、範例和開發工作流程的全面資源  
+**類型**: 文檔和指導儲存庫  
+**託管**: GitHub（具有本地代理訪問）
 
-This repository serves as a centralized hub for documenting best practices, workflows, and conventions for AI assistants working with Claude Code and related development tools.
+本儲存庫是一個集中樞紐，用於記錄最佳實踐、工作流程以及與 Claude Code 和相關開發工具協作的約定。
 
-## Table of Contents
+## 目錄
 
-1. [Repository Structure](#repository-structure)
-2. [Development Workflow](#development-workflow)
-3. [Branching Strategy](#branching-strategy)
-4. [Commit Conventions](#commit-conventions)
-5. [Code Quality Standards](#code-quality-standards)
-6. [Documentation Standards](#documentation-standards)
-7. [AI Assistant Guidelines](#ai-assistant-guidelines)
-8. [Tools and Technologies](#tools-and-technologies)
+1. [儲存庫結構](#儲存庫結構)
+2. [開發工作流程](#開發工作流程)
+3. [分支策略](#分支策略)
+4. [提交約定](#提交約定)
+5. [代碼品質標準](#代碼品質標準)
+6. [文檔標準](#文檔標準)
+7. [AI 助手指南](#ai-助手指南)
+8. [工具和技術](#工具和技術)
 
 ---
 
-## Repository Structure
+## 儲存庫結構
 
-The repository is organized as follows (to be expanded as content is added):
+儲存庫組織如下（內容增加時將擴展）：
 
 ```
 Claude-/
-├── CLAUDE.md                    # This file - repository guide for AI assistants
-├── README.md                    # Project overview (to be created)
-├── docs/                        # Documentation directory (to be created)
-│   ├── getting-started/         # Getting started guides
-│   ├── workflows/               # Development workflow documentation
-│   ├── conventions/             # Code and documentation conventions
-│   └── examples/                # Code examples and templates
-├── guides/                      # User guides (to be created)
-│   ├── claude-code-setup.md     # Claude Code setup instructions
-│   ├── git-workflow.md          # Git workflow guide
-│   └── ai-assistant-guide.md    # Guidelines for AI assistants
-├── templates/                   # Project templates (to be created)
-├── scripts/                     # Utility scripts (to be created)
-└── .github/                     # GitHub configuration (to be created)
-    ├── workflows/               # GitHub Actions workflows
-    └── CODEOWNERS               # Code owners configuration
+├── CLAUDE.md                    # 本檔案 - AI 助手的儲存庫指南
+├── README.md                    # 專案概述（待建立）
+├── docs/                        # 文檔目錄（待建立）
+│   ├── getting-started/         # 快速入門指南
+│   ├── workflows/               # 開發工作流程文檔
+│   ├── conventions/             # 代碼和文檔約定
+│   └── examples/                # 代碼範例和範本
+├── guides/                      # 使用者指南（待建立）
+│   ├── claude-code-setup.md     # Claude Code 設置說明
+│   ├── git-workflow.md          # Git 工作流程指南
+│   └── ai-assistant-guide.md    # AI 助手指南
+├── templates/                   # 專案範本（待建立）
+├── scripts/                     # 公用指令碼（待建立）
+└── .github/                     # GitHub 配置（待建立）
+    ├── workflows/               # GitHub Actions 工作流程
+    └── CODEOWNERS               # 代碼所有者配置
 ```
 
-### Current State
+### 目前狀態
 
-This repository is in its early stages. The primary structure uses GitHub branches for feature development and documentation. Key files to be added will include:
+本儲存庫處於早期階段。主要結構使用 GitHub 分支進行功能開發和文檔記錄。要添加的關鍵檔案包括：
 
-- Comprehensive README with project overview
-- CLI tool documentation for Claude Code
-- Setup and configuration guides
-- Best practices for integration with AI assistants
-- Examples of effective prompts and workflows
+- 帶有專案概述的全面 README
+- Claude Code CLI 工具文檔
+- 設置和配置指南
+- 與 AI 助手集成的最佳實踐
+- 有效提示和工作流程的範例
 
 ---
 
-## Development Workflow
+## 開發工作流程
 
-### Overview
+### 概述
 
-The development workflow follows a standard feature branch model with clear separation between development and production branches.
+開發工作流程遵循標準功能分支模型，清楚地區分開發和生產分支。
 
-### Initial Setup
+### 初始設置
 
 ```bash
-# Clone the repository
+# 複製儲存庫
 git clone http://local_proxy@127.0.0.1:38001/git/daierlu6-sys/Claude-
 
-# Navigate to directory
+# 導航到目錄
 cd Claude-
 
-# Check available branches
+# 檢查可用的分支
 git branch -a
 
-# Create and switch to your development branch
+# 建立並切換到開發分支
 git checkout -b feature/your-feature-name
 ```
 
-### Development Process
+### 開發過程
 
-1. **Create a feature branch** from the appropriate base (usually `main`)
-   - Branch naming follows the convention: `feature/`, `docs/`, `fix/`, etc.
+1. **建立功能分支**，從適當的基礎分支（通常是 `main`）分支出來
+   - 分支命名遵循約定：`feature/`、`docs/`、`fix/` 等
 
-2. **Make changes locally**
-   - Edit files and test thoroughly
-   - Commit frequently with clear, descriptive messages
+2. **在本地進行更改**
+   - 編輯檔案並進行徹底測試
+   - 使用清晰的描述性訊息頻繁提交
 
-3. **Push changes to remote**
-   - Use: `git push -u origin your-branch-name`
-   - This tracks the remote branch and simplifies future pushes
+3. **推送更改到遠端**
+   - 使用：`git push -u origin your-branch-name`
+   - 這會追蹤遠端分支，簡化未來的推送
 
-4. **Create a Pull Request**
-   - Document what changed and why
-   - Reference any related issues
-   - Request appropriate reviewers
+4. **建立提取請求**
+   - 記錄所變更的內容和原因
+   - 參考任何相關的議題
+   - 請求適當的審閱者進行審查
 
-5. **Address review feedback**
-   - Make requested changes on the same branch
-   - Push updates: `git push origin your-branch-name`
-   - Do not force-push unless explicitly authorized
+5. **處理審查反饋**
+   - 在同一分支上進行請求的更改
+   - 推送更新：`git push origin your-branch-name`
+   - 除非獲得明確授權，否則不要強制推送
 
-6. **Merge when approved**
-   - Use GitHub's merge functionality (preferred: squash or rebase)
-   - Delete the feature branch after merging
+6. **審查批准後進行合併**
+   - 使用 GitHub 的合併功能（推薦：壓縮或重新基礎化）
+   - 合併後刪除功能分支
 
-### Emergency Procedures
+### 緊急程序
 
-In rare cases where immediate action is needed:
+在需要立即行動的罕見情況下：
 
-- **For critical fixes**: Follow the same workflow but prioritize reviews
-- **For infrastructure changes**: Notify maintainers and coordinate merges
-- **Destructive operations**: Always confirm with the team before proceeding
-  - Examples: force-push, deleting branches, removing files, resetting commits
+- **對於關鍵修復**：遵循相同的工作流程，但優先進行審查
+- **對於基礎設施更改**：通知維護者並協調合併
+- **破壞性操作**：在進行之前始終與團隊確認
+  - 範例：強制推送、刪除分支、移除檔案、重置提交
 
 ---
 
-## Branching Strategy
+## 分支策略
 
-### Branch Naming Conventions
+### 分支命名約定
 
-Use descriptive, kebab-case branch names with clear prefixes:
+使用描述性、短線分隔的分支名稱，帶有清晰的前綴：
 
-| Prefix | Purpose | Example |
-|--------|---------|---------|
-| `feature/` | New features or functionality | `feature/add-api-documentation` |
-| `docs/` | Documentation improvements | `docs/update-workflow-guide` |
-| `fix/` | Bug fixes | `fix/typo-in-readme` |
-| `refactor/` | Code refactoring | `refactor/simplify-utils` |
-| `test/` | Test additions or improvements | `test/add-integration-tests` |
-| `chore/` | Maintenance tasks | `chore/update-dependencies` |
+| 前綴 | 目的 | 範例 |
+|------|------|------|
+| `feature/` | 新功能或功能性 | `feature/add-api-documentation` |
+| `docs/` | 文檔改進 | `docs/update-workflow-guide` |
+| `fix/` | 錯誤修復 | `fix/typo-in-readme` |
+| `refactor/` | 代碼重構 | `refactor/simplify-utils` |
+| `test/` | 測試添加或改進 | `test/add-integration-tests` |
+| `chore/` | 維護任務 | `chore/update-dependencies` |
 
-### Main Branches
+### 主要分支
 
-- **`main`**: Production-ready code. Always stable and deployable.
-  - Only accepts merges from pull requests
-  - Requires review and passing checks
-  - Tagged with version releases
+- **`main`**: 生產就緒的代碼。始終穩定且可部署。
+  - 僅接受來自提取請求的合併
+  - 需要審查和通過檢查
+  - 使用版本發佈進行標記
 
-- **`claude/add-claude-documentation-3Outs`**: Current development branch for Claude documentation enhancements
-  - Active feature branch for documentation improvements
-  - Will merge to `main` when complete and reviewed
+- **`claude/add-claude-documentation-3Outs`**: 當前的 Claude 文檔增強開發分支
+  - 文檔改進的活躍功能分支
+  - 完成並審查後將合併到 `main`
 
-### Lifetime of a Branch
+### 分支的生命周期
 
 ```
 main
-  ↓ (create from)
+  ↓ (建立自)
 feature/your-feature
-  ↓ (push & create PR)
-Pull Request Review
-  ↓ (address feedback)
-feature/your-feature (updated)
-  ↓ (approved & merge)
-main (merged commit)
-  ↓ (delete branch)
-[branch archived in history]
+  ↓ (推送並建立提取請求)
+提取請求審查
+  ↓ (處理反饋)
+feature/your-feature (更新)
+  ↓ (批准並合併)
+main (合併提交)
+  ↓ (刪除分支)
+[分支在歷史中歸檔]
 ```
 
 ---
 
-## Commit Conventions
+## 提交約定
 
-### Commit Message Format
+### 提交訊息格式
 
-Follow the conventional commits format for clear, scannable commit history:
+遵循常規提交格式以實現清晰、可掃描的提交歷史記錄：
 
 ```
 type(scope): subject
@@ -176,505 +176,507 @@ body
 footer
 ```
 
-### Types
+### 類型
 
-- **feat**: A new feature
-- **fix**: A bug fix
-- **docs**: Documentation changes
-- **style**: Code style changes (formatting, semicolons, etc.)
-- **refactor**: Code refactoring without feature changes
-- **test**: Test additions or modifications
-- **chore**: Maintenance tasks, dependency updates
-- **ci**: CI/CD pipeline changes
+- **feat**: 新功能
+- **fix**: 錯誤修復
+- **docs**: 文檔更改
+- **style**: 代碼風格更改（格式化、分號等）
+- **refactor**: 代碼重構，無功能更改
+- **test**: 測試添加或修改
+- **chore**: 維護任務、依賴項更新
+- **ci**: CI/CD 管道更改
 
-### Examples
+### 範例
 
 ```
 feat(documentation): add Claude Code setup guide
 
-Adds comprehensive setup instructions for Claude Code including:
-- Installation steps
-- Configuration options
-- First project walkthrough
+新增 Claude Code 的全面設置說明，包括：
+- 安裝步驟
+- 配置選項
+- 首個專案演練
 
-Closes #42
+關閉 #42
 
 ---
 
 fix(readme): correct typo in contribution guidelines
 
+修正貢獻指南中的打字錯誤
+
 ---
 
 docs(api): update endpoint documentation for v2.0
 
-Breaking change: endpoint /v1/users now returns full user objects
-instead of user IDs. See migration guide in docs/migrations/v1-v2.md
+重大變更：端點 /v1/users 現在返回完整使用者物件
+而不是使用者 ID。請參閱 docs/migrations/v1-v2.md 中的遷移指南
 
-Refs #156
+參考 #156
 ```
 
-### Guidelines
+### 指南
 
-- **Use imperative mood**: "add feature" not "added feature"
-- **Keep subject line under 50 characters**
-- **Separate subject from body with blank line**
-- **Wrap body at 72 characters**
-- **Reference issues**: Use "Closes #123" or "Refs #123"
-- **Document breaking changes**: Clearly mark any non-backward-compatible changes
-- **Be atomic**: One logical change per commit
-- **Write clear rationale**: Explain WHY, not just WHAT
+- **使用命令式語氣**：「新增功能」而非「已新增功能」
+- **主題行保持在 50 個字元以下**
+- **用空白行分隔主題和正文**
+- **正文在 72 個字元處換行**
+- **參考議題**：使用「Closes #123」或「Refs #123」
+- **記錄重大變更**：清楚地標記任何非向後兼容的更改
+- **保持原子性**：每次提交一個邏輯更改
+- **撰寫清晰的原理**：說明為什麼，而不僅僅是什麼
 
-### Commit Best Practices
+### 提交最佳實踐
 
-✅ **Do**:
-- Make small, focused commits
-- Commit frequently during development
-- Write descriptive messages
-- Reference related issues
-- Create new commits rather than amending published commits
+✅ **應該做**:
+- 進行小的、專注的提交
+- 在開發期間頻繁提交
+- 撰寫描述性訊息
+- 參考相關議題
+- 創建新提交而不是修改已發佈的提交
 
-❌ **Don't**:
-- Mix unrelated changes in one commit
-- Use vague messages like "update stuff" or "WIP"
-- Amend commits that have been pushed and reviewed
-- Force-push without explicit authorization
-- Create empty commits
+❌ **不應該做**:
+- 在一次提交中混合無關的更改
+- 使用模糊的訊息，如「更新內容」或「進行中」
+- 修改已推送和審查的提交
+- 在沒有明確授權的情況下強制推送
+- 創建空提交
 
 ---
 
-## Code Quality Standards
+## 代碼品質標準
 
-### General Principles
+### 一般原則
 
-1. **Clarity over cleverness**
-   - Code should be readable and maintainable
-   - Prefer explicit implementations to magical behavior
-   - Use clear variable and function names
+1. **清晰勝於聰明**
+   - 代碼應易讀且易維護
+   - 傾向於明確的實現，而非神秘的行為
+   - 使用清晰的變數和函數名稱
 
-2. **DRY (Don't Repeat Yourself)**
-   - Avoid duplicating code logic
-   - Create reusable utilities and components
-   - Three similar lines can be extracted; one is not premature
+2. **DRY（不要重複自己）**
+   - 避免重複代碼邏輯
+   - 建立可重用的公用程式和元件
+   - 三個相似的行可以提取；一個則不是過早優化
 
-3. **KISS (Keep It Simple, Stupid)**
-   - Implement what's needed, not what might be needed
-   - Avoid over-engineering for hypothetical future requirements
-   - Simplify when possible without sacrificing readability
+3. **KISS（保持簡單，笨蛋）**
+   - 實現所需的內容，而非可能需要的內容
+   - 避免針對假設的未來需求進行過度工程設計
+   - 在不犧牲可讀性的前提下簡化
 
-4. **Security First**
-   - Validate all external input
-   - Use secure defaults
-   - Avoid common vulnerabilities (SQL injection, XSS, command injection, etc.)
-   - Store secrets securely (never commit credentials)
+4. **安全第一**
+   - 驗證所有外部輸入
+   - 使用安全預設設定
+   - 避免常見漏洞（SQL 注入、XSS、命令注入等）
+   - 安全地存儲機密（從不提交憑據）
 
-### Code Style
+### 代碼風格
 
-- **Formatting**: Use consistent indentation (2 or 4 spaces, not tabs)
-- **Line Length**: Aim for 80-100 character limits where practical
-- **Naming**: Use clear, descriptive names in the appropriate case convention
-  - Variables/functions: `camelCase` or `snake_case` depending on language
-  - Classes: `PascalCase`
-  - Constants: `UPPER_SNAKE_CASE`
-- **Comments**: Use only when the WHY is non-obvious
-  - Avoid redundant comments that restate the code
-  - Explain hidden constraints, edge cases, and workarounds
+- **格式化**：使用一致的縮進（2 或 4 個空格，非製表符）
+- **行長度**：在實踐中目標為 80-100 個字元限制
+- **命名**：根據語言使用適當的情況約定的清晰、描述性名稱
+  - 變數/函數：`camelCase` 或 `snake_case`
+  - 類別：`PascalCase`
+  - 常數：`UPPER_SNAKE_CASE`
+- **評論**：僅在目的不明確時使用
+  - 避免重複代碼的冗餘評論
+  - 說明隱藏的限制、邊界情況和變通方法
 
-### Comments and Documentation
+### 評論和文檔
 
-Only add comments when:
-- The purpose is non-obvious
-- There's a hidden constraint or invariant
-- Workarounds for specific bugs are needed
-- Complex algorithms need explanation
+僅在以下情況下添加評論：
+- 目的不明確
+- 存在隱藏的限制或不變性
+- 需要針對特定錯誤的變通方法
+- 複雜的演算法需要說明
 
-**Don't** comment:
-- Self-explanatory code
-- WHAT the code does (well-named identifiers do that)
-- Current task references (belongs in PR description)
+**不要**評論：
+- 自明的代碼
+- 代碼做了什麼（命名良好的識別碼可以做到這一點）
+- 目前任務參考（屬於提取請求描述）
 
-### Testing
+### 測試
 
-- **Unit Tests**: Test individual functions and components
-- **Integration Tests**: Verify interactions between components
-- **Edge Cases**: Include tests for boundary conditions
-- **Error Paths**: Test error handling and recovery
+- **單元測試**：測試單個函數和元件
+- **整合測試**：驗證元件之間的交互
+- **邊界情況**：包括邊界條件的測試
+- **錯誤路徑**：測試錯誤處理和恢復
 
-Tests should:
-- Have clear, descriptive names
-- Test one thing per test function
-- Use meaningful assertions with helpful error messages
-- Be independent and not rely on execution order
+測試應該：
+- 具有清晰、描述性的名稱
+- 每個測試函數測試一件事
+- 使用有意義的斷言和有幫助的錯誤訊息
+- 獨立且不依賴於執行順序
 
-### Error Handling
+### 錯誤處理
 
-- **Validate at boundaries**: User input, external APIs, file system
-- **Trust internal code**: No need to validate data from trusted internal sources
-- **Handle only recoverable errors**: Let unrecoverable errors propagate
-- **Provide context**: Error messages should explain what went wrong and what was expected
+- **在邊界驗證**：使用者輸入、外部 API、檔案系統
+- **信任內部代碼**：無需驗證來自受信任內部來源的數據
+- **僅處理可恢復的錯誤**：讓不可恢復的錯誤傳播
+- **提供背景**：錯誤訊息應說明出了什麼問題以及預期是什麼
 
 ---
 
-## Documentation Standards
+## 文檔標準
 
-### Documentation Files
+### 文檔檔案
 
-All documentation should use Markdown format with consistent structure:
+所有文檔應使用 Markdown 格式且結構一致：
 
 ```markdown
-# Title
+# 標題
 
-Brief one-sentence description.
+簡短的一句話描述。
 
-## Overview
+## 概述
 
-Longer explanation of the topic (2-3 paragraphs).
+主題的更長說明（2-3 個段落）。
 
-## Key Concepts
+## 關鍵概念
 
-- Concept 1: description
-- Concept 2: description
+- 概念 1：描述
+- 概念 2：描述
 
-## How To / Examples
+## 如何進行 / 範例
 
-Step-by-step guide or code examples.
+分步指南或代碼範例。
 
-## Best Practices
+## 最佳實踐
 
-- Practice 1
-- Practice 2
+- 實踐 1
+- 實踐 2
 
-## Related Topics
+## 相關主題
 
-- [Link to related docs](path)
-- [External reference](url)
+- [相關文檔的連結](path)
+- [外部參考](url)
 ```
 
-### README Requirements
+### README 要求
 
-Every project or major component should have a README that includes:
+每個專案或主要元件應有一個包括以下內容的 README：
 
-- **Title and Description**: What is this?
-- **Quick Start**: How do I get started?
-- **Installation**: How do I set it up?
-- **Usage**: How do I use it?
-- **Configuration**: What can I configure?
-- **Contributing**: How do I contribute?
-- **License**: What license is this under?
+- **標題和描述**：這是什麼？
+- **快速開始**：我如何開始？
+- **安裝**：我如何設置它？
+- **使用**：我如何使用它？
+- **配置**：我可以配置什麼？
+- **貢獻**：我如何貢獻？
+- **許可證**：這是在什麼許可證下？
 
-### API Documentation
+### API 文檔
 
-For APIs or libraries:
+對於 API 或程式庫：
 
-- Document all public methods/endpoints
-- Include parameter descriptions and types
-- Show example usage for common scenarios
-- Document return values and error conditions
-- Provide example requests/responses
+- 記錄所有公共方法/端點
+- 包括參數描述和類型
+- 顯示常見場景的使用範例
+- 記錄回傳值和錯誤條件
+- 提供範例請求/回應
 
-### Changelog
+### 變更日誌
 
-Maintain a CHANGELOG.md with sections for:
+維護具有以下部分的 CHANGELOG.md：
 
 ```markdown
-# Changelog
+# 變更日誌
 
-All notable changes to this project are documented in this file.
+本專案的所有重要更改都在此檔案中記錄。
 
-## [Unreleased]
+## [未發佈]
 
-### Added
-- New features
+### 新增
+- 新功能
 
-### Changed
-- Changes to existing functionality
+### 變更
+- 現有功能的更改
 
-### Deprecated
-- Soon-to-be removed features
+### 已棄用
+- 即將移除的功能
 
-### Removed
-- Removed features
+### 移除
+- 移除的功能
 
-### Fixed
-- Bug fixes
+### 已修復
+- 錯誤修復
 
-### Security
-- Security vulnerability fixes
+### 安全
+- 安全漏洞修復
 
 ## [1.0.0] - YYYY-MM-DD
 
-[Release notes for version 1.0.0]
+[版本 1.0.0 的發佈說明]
 ```
 
 ---
 
-## AI Assistant Guidelines
+## AI 助手指南
 
-### Purpose
+### 目的
 
-This section provides clear guidance for AI assistants (like Claude) working within this repository.
+本節為在此儲存庫中工作的 AI 助手（如 Claude）提供清晰的指導。
 
-### Before Starting Work
+### 開始工作前
 
-1. **Review this CLAUDE.md file** to understand repository conventions
-2. **Check the current branch**: Ensure you're on the correct feature branch
-3. **Understand the task**: Read the issue or task description completely
-4. **Explore the structure**: Familiarize yourself with relevant parts of the codebase
-5. **Check recent commits**: Understand what's been worked on recently
+1. **檢查本 CLAUDE.md 檔案**以了解儲存庫約定
+2. **檢查目前分支**：確保您位於正確的功能分支
+3. **理解任務**：完整閱讀議題或任務描述
+4. **探索結構**：熟悉代碼庫的相關部分
+5. **檢查最近的提交**：了解最近的工作內容
 
-### Working with Files
+### 使用檔案
 
-✅ **Preferred Approach**:
-- Use `Read` tool to view existing files
-- Use `Edit` tool for modifying existing files
-- Use `Write` tool to create new files (when necessary)
-- Use `Bash` tool for git operations and shell commands
+✅ **首選方法**:
+- 使用 `Read` 工具檢視現有檔案
+- 使用 `Edit` 工具修改現有檔案
+- 使用 `Write` 工具建立新檔案（必要時）
+- 使用 `Bash` 工具進行 Git 操作和 Shell 命令
 
-❌ **Avoid**:
-- Creating unnecessary files
-- Duplicating existing functionality
-- Modifying files outside the scope of the task
-- Making changes without understanding the context
+❌ **應避免**:
+- 創建不必要的檔案
+- 重複現有功能
+- 修改任務範圍外的檔案
+- 在不了解背景的情況下進行更改
 
-### Making Changes
+### 進行更改
 
-**Before Editing**:
-1. Read the entire file to understand context
-2. Identify the specific location that needs changes
-3. Understand why the change is needed
+**編輯前**:
+1. 閱讀整個檔案以了解背景
+2. 確定需要更改的具體位置
+3. 理解為什麼需要更改
 
-**During Editing**:
-1. Make focused, minimal changes
-2. Preserve existing code style and conventions
-3. Don't introduce unrelated refactoring
-4. Test changes when possible
+**編輯期間**:
+1. 進行專注的、最小的更改
+2. 保留現有的代碼風格和約定
+3. 不要引入無關的重構
+4. 盡可能測試更改
 
-**After Editing**:
-1. Verify the changes are correct
-2. Check for any side effects
-3. Ensure no new issues are introduced
+**編輯後**:
+1. 驗證更改正確
+2. 檢查任何副作用
+3. 確保沒有引入新問題
 
-### Commit Workflow
+### 提交工作流程
 
-For each task:
+對於每項任務：
 
-1. **Stage changes**: Use `git add` for specific files, not `git add -A`
-2. **Create a commit**: Follow the [Commit Conventions](#commit-conventions) section
-3. **Push to remote**: Use `git push -u origin branch-name`
-4. **Verify on GitHub**: Confirm changes appear in the remote repository
+1. **暫存更改**：對特定檔案使用 `git add`，而不是 `git add -A`
+2. **建立提交**：遵循[提交約定](#提交約定)部分
+3. **推送到遠端**：使用 `git push -u origin branch-name`
+4. **在 GitHub 上驗證**：確認更改出現在遠端儲存庫中
 
-Example:
+範例：
 ```bash
-git status                           # Review changes
-git add docs/new-guide.md            # Stage specific files
+git status                           # 檢查更改
+git add docs/new-guide.md            # 暫存特定檔案
 git commit -m "docs(guide): add new setup documentation"
-git push -u origin docs/claude-setup # Push to remote
+git push -u origin docs/claude-setup # 推送到遠端
 ```
 
-### Handling Errors and Blockers
+### 處理錯誤和阻礙
 
-When encountering issues:
+遇到問題時：
 
-1. **Investigate thoroughly**
-   - Don't use destructive operations to bypass issues
-   - Identify root causes
-   - Try safer alternatives first
+1. **徹底調查**
+   - 不要使用破壞性操作來繞過問題
+   - 確定根本原因
+   - 首先嘗試更安全的替代方案
 
-2. **Ask for clarification**
-   - If requirements are ambiguous, ask the user
-   - If changes affect architecture, discuss before implementing
+2. **尋求澄清**
+   - 如果需求不明確，請提問
+   - 如果更改影響架構，請在實施前討論
 
-3. **Provide context**
-   - Explain what you found
-   - Explain why you're blocked
-   - Suggest potential solutions
+3. **提供背景資訊**
+   - 解釋您發現的內容
+   - 解釋為什麼被阻止
+   - 建議潛在的解決方案
 
-### Code Review Standards
+### 代碼審查標準
 
-When reviewing code:
+審查代碼時：
 
-- Check for adherence to conventions in CLAUDE.md
-- Verify commits follow the commit message format
-- Ensure tests pass and coverage is appropriate
-- Look for security issues and edge cases
-- Suggest improvements with clear rationale
+- 檢查是否遵循 CLAUDE.md 中的約定
+- 驗證提交是否遵循提交訊息格式
+- 確保測試通過且涵蓋範圍適當
+- 尋找安全問題和邊界情況
+- 提出有明確理由的改進建議
 
-### Destructive Operations
+### 破壞性操作
 
-The following operations require explicit user approval:
+以下操作需要明確的使用者批准：
 
-- `git push --force` (force push)
-- `git reset --hard` (discard changes)
-- `git checkout .` (discard all changes)
-- `git branch -D` (delete branch)
-- Deleting files or directories
-- Modifying CI/CD pipelines
-- Changing public APIs
+- `git push --force` （強制推送）
+- `git reset --hard` （放棄更改）
+- `git checkout .` （放棄所有更改）
+- `git branch -D` （刪除分支）
+- 刪除檔案或目錄
+- 修改 CI/CD 管道
+- 變更公開 API
 
-Always:
-- Explain what you plan to do
-- Describe the impact
-- Ask for confirmation
-- Wait for approval before proceeding
+始終：
+- 說明計劃做什麼
+- 描述影響
+- 請求確認
+- 在繼續前等待批准
 
-### Workflow Checklist
+### 工作流程檢查清單
 
-Before marking a task complete:
+在將任務標記為完成前：
 
-- [ ] Changes address the original task/issue
-- [ ] Code follows repository conventions
-- [ ] Commits have clear, descriptive messages
-- [ ] Changes are pushed to the correct branch
-- [ ] No unrelated changes are included
-- [ ] Testing has been performed (if applicable)
-- [ ] Documentation has been updated (if applicable)
-- [ ] No security issues have been introduced
-
----
-
-## Tools and Technologies
-
-### Version Control
-
-- **Git**: Distributed version control system
-- **GitHub**: Repository hosting and collaboration platform
-- **Branching Model**: Feature branch model with `main` as stable branch
-
-### Communication
-
-- **GitHub Issues**: Task and bug tracking
-- **Pull Requests**: Code review and collaboration
-- **Commit Messages**: Clear, structured communication of changes
-
-### Development Tools
-
-- **Claude Code**: CLI and IDE extensions for AI-assisted development
-- **Local Development**: Standard text editors and IDEs
-- **Terminal/Shell**: For git operations and running scripts
-
-### CI/CD (To be implemented)
-
-- GitHub Actions for automated testing and validation
-- Branch protection rules on `main`
-- Required checks before merging
+- [ ] 更改解決了原始任務/議題
+- [ ] 代碼遵循儲存庫約定
+- [ ] 提交具有清晰的描述性訊息
+- [ ] 更改已推送到正確的分支
+- [ ] 未包括無關的更改
+- [ ] 已執行測試（如適用）
+- [ ] 已更新文檔（如適用）
+- [ ] 未引入安全問題
 
 ---
 
-## Common Workflows
+## 工具和技術
 
-### Starting a New Feature
+### 版本控制
+
+- **Git**: 分散式版本控制系統
+- **GitHub**: 儲存庫託管和協作平台
+- **分支模型**：功能分支模型，`main` 作為穩定分支
+
+### 通訊
+
+- **GitHub 議題**：任務和錯誤追蹤
+- **提取請求**：代碼審查和協作
+- **提交訊息**：清晰、結構化的更改通訊
+
+### 開發工具
+
+- **Claude Code**: 用於 AI 輔助開發的 CLI 和 IDE 擴展
+- **本地開發**：標準文字編輯器和 IDE
+- **終端/Shell**: 用於 Git 操作和執行指令碼
+
+### CI/CD （待實施）
+
+- GitHub Actions 用於自動化測試和驗證
+- `main` 上的分支保護規則
+- 合併前所需的檢查
+
+---
+
+## 常見工作流程
+
+### 開始新功能
 
 ```bash
-# Switch to main and pull latest
+# 切換到 main 並拉取最新內容
 git checkout main
 git pull origin main
 
-# Create and switch to feature branch
+# 建立並切換到功能分支
 git checkout -b feature/your-feature-name
 
-# Make changes, commit, and push
+# 進行更改、提交和推送
 git add <files>
 git commit -m "feat(scope): description"
 git push -u origin feature/your-feature-name
 ```
 
-### Updating a Branch with Latest Main
+### 使用最新 Main 更新分支
 
 ```bash
-# Fetch latest main
+# 拉取最新 main
 git fetch origin main
 
-# Rebase your branch (or merge, depending on preference)
+# 重新基礎化您的分支（或合併，取決於偏好）
 git rebase origin/main
-# or
+# 或
 git merge origin/main
 
-# Push updated branch
+# 推送更新的分支
 git push origin your-branch-name
 ```
 
-### Reviewing Your Own Changes
+### 審查自己的更改
 
 ```bash
-# View uncommitted changes
+# 檢視未提交的更改
 git diff
 
-# View staged changes
+# 檢視暫存的更改
 git diff --cached
 
-# View last commit
+# 檢視最後一次提交
 git show HEAD
 
-# View commit history
+# 檢視提交歷史
 git log --oneline -10
 ```
 
-### Reverting Changes
+### 還原更改
 
 ```bash
-# Revert specific file to last commit
+# 將特定檔案還原到最後一次提交
 git checkout -- path/to/file
 
-# Undo last commit (keep changes)
+# 撤銷最後一次提交（保留更改）
 git reset --soft HEAD~1
 
-# View what would be reverted
+# 檢視將被還原的內容
 git diff HEAD~1
 ```
 
 ---
 
-## Resources and References
+## 資源和參考
 
-### Documentation to Create
+### 要建立的文檔
 
-- [ ] README.md - Project overview
-- [ ] docs/getting-started.md - Getting started guide
-- [ ] docs/workflows/git-workflow.md - Detailed git workflows
-- [ ] docs/conventions/code-style.md - Code style guide
-- [ ] docs/conventions/documentation-style.md - Documentation conventions
-- [ ] guides/claude-code-setup.md - Claude Code setup and configuration
-- [ ] guides/ai-assistant-guide.md - Extended guidelines for AI assistants
+- [ ] README.md - 專案概述
+- [ ] docs/getting-started.md - 快速入門指南
+- [ ] docs/workflows/git-workflow.md - 詳細的 Git 工作流程
+- [ ] docs/conventions/code-style.md - 代碼風格指南
+- [ ] docs/conventions/documentation-style.md - 文檔約定
+- [ ] guides/claude-code-setup.md - Claude Code 設置和配置
+- [ ] guides/ai-assistant-guide.md - AI 助手的擴展指南
 
-### External References
+### 外部參考
 
-- [Conventional Commits](https://www.conventionalcommits.org/)
+- [常規提交](https://www.conventionalcommits.org/)
 - [GitHub Flow](https://guides.github.com/introduction/flow/)
-- [Markdown Guide](https://www.markdownguide.org/)
-- [Git Documentation](https://git-scm.com/doc)
+- [Markdown 指南](https://www.markdownguide.org/)
+- [Git 文檔](https://git-scm.com/doc)
 
 ---
 
-## Maintenance and Updates
+## 維護和更新
 
-This CLAUDE.md file should be updated when:
+此 CLAUDE.md 檔案應在以下情況下更新：
 
-- Repository structure changes significantly
-- New conventions are established
-- Workflow processes change
-- New tools are adopted
-- Documentation standards are refined
+- 儲存庫結構發生重大變化
+- 建立新約定
+- 工作流程程序更改
+- 採用新工具
+- 文檔標準被調整
 
-### Updating This File
+### 更新此檔案
 
-1. Create a branch: `docs/update-claude-md`
-2. Make changes following the conventions in this file
-3. Commit with message: `docs(claude): [describe what changed]`
-4. Create a pull request with clear explanation
-5. Merge after review
-
----
-
-## Questions or Clarifications?
-
-If anything in this guide is unclear:
-
-1. Refer to the [Commit Conventions](#commit-conventions) and [AI Assistant Guidelines](#ai-assistant-guidelines) sections
-2. Check relevant example files or existing code
-3. Ask in GitHub issues or pull request discussions
-4. Review this file for related information
+1. 建立分支：`docs/update-claude-md`
+2. 按照本檔案中的約定進行更改
+3. 提交訊息：`docs(claude): [describe what changed]`
+4. 建立包含清晰說明的提取請求
+5. 審查後合併
 
 ---
 
-**Last Updated**: 2026-05-07  
-**Maintained By**: Development team and AI assistants  
-**Version**: 1.0
+## 有疑問或需要澄清？
+
+如果本指南中有任何不清楚的地方：
+
+1. 參考[提交約定](#提交約定)和 [AI 助手指南](#ai-助手指南)部分
+2. 檢查相關的範例檔案或現有代碼
+3. 在 GitHub 議題或提取請求討論中提問
+4. 查看本檔案以獲取相關資訊
+
+---
+
+**最後更新**: 2026-05-07  
+**維護者**: 開發團隊和 AI 助手  
+**版本**: 1.0（繁體中文版）
