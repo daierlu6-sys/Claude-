@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Product {
+  id               Int      @id @default(autoincrement())
+  name             String
+  category         String   @default("Makeup")
+  subCategory      String?
+  price            Float
+  priceMin         Float?
+  priceMax         Float?
+  currency         String   @default("MYR")
+
+  gmv              Float?
+  gmvGrowthRate    Float?
+  salesVolume      Int?
+  salesGrowthRate  Float?
+  creatorCount     Int?
+  creatorGrowthRate Float?
+  videoCount       Int?
+  viewCount        Int?
+
+  primaryKeyword   String?
+  keywords         String?
+  searchVolume     Int?
+  searchTrend      String?
+
+  sellerCount      Int?
+  competitionLevel String?
+
+  trendScore       Float    @default(0)
+  trendStatus      String   @default("unknown")
+
+  imageUrl         String?
+  productUrl       String?
+  brand            String?
+  description      String?
+
+  dataDate         DateTime?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([trendScore])
+  @@index([trendStatus])
+}
